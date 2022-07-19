@@ -18,4 +18,4 @@ make -j4
 ```
 
 ## Setup the environment
-If you want to setup the environment, please refer to the further [document](https://github.com/tien7397/Expander/edit/main/SetupEnvironment.md)
+If you want to setup the environment, please refer to the further [document](https://github.com/tien7397/Expander/blob/main/SetupEnvironment.md)
