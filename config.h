@@ -1,7 +1,7 @@
 #ifndef DEFINITION_H
 #define DEFINITION_H
 
-#define SOFTWARE_VERSION "1.1.4.7"
+#define SOFTWARE_VERSION "1.1.4.8"
 #define HARDWARE_VERSION "1.0.1"
 
 #ifdef RASPBERRY_PI
@@ -14,7 +14,7 @@
 #define PATH_SAVE_PROFILES      std::string("AIVEX/Database/Profiles/") //for API to webUI
 #define PATH_SAVE_IMAGES        std::string("AIVEX/Database/Images/")   //for API to webUI
 #else
-#define WORKSPACE               std::string("/media/tienvh/Workspace/1.AIView/AIVEX/source/trunk/build/")
+#define WORKSPACE               std::string("./")
 #define FOLDER_AIVEX            std::string(WORKSPACE + "AIVEX/")
 #define FOLDER_LOG              std::string(WORKSPACE + "AIVEX/Log/")
 #define FOLDER_DATABASE         std::string(WORKSPACE + "AIVEX/Database/")
