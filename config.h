@@ -1,7 +1,7 @@
 #ifndef DEFINITION_H
 #define DEFINITION_H
 
-#define SOFTWARE_VERSION "1.1.4.6"
+#define SOFTWARE_VERSION "1.1.4.7"
 #define HARDWARE_VERSION "1.0.1"
 
 #ifdef RASPBERRY_PI

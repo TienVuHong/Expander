@@ -1350,7 +1350,7 @@ void cameraOpendoorHandle(struct evhttp_request *request, int channel)
             if (!jContent.contains("license")) SEND_ERROR_RETURN(request, 400, "Type: license, license not found");
             jIDArray = jContent["license"];
         }
-        else if (jContent["type"] == "vehicle")
+        else if (jContent["type"] == "vehicledetection")
         {
             std::cout << "vehicle" << std::endl;
             if (!jContent.contains("object_type")) SEND_ERROR_RETURN(request, 400, "object_type not found");

@@ -307,7 +307,7 @@ static int getToken(HttpClient *client, camera_t &camera)
         try 
         {
             json jResponse = json::parse(response);
-            camera.token = jResponse["access_token"];
+            camera.token = jResponse["data"]["access_token"];
             std::cout << "Get token successfully, Response " << camera.ip << ": \n" << response << std::endl;
         }
         catch(const std::exception& e)
