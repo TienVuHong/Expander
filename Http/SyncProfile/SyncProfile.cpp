@@ -4,11 +4,11 @@
 #include <unistd.h>
 #include <dirent.h>
 #include <fstream>
-#include "../../service/base64/base64.h"
-#include "../../Database/Database.hpp"
-#include "../../config.h"
-#include "../HttpClient.hpp"
-#include "SyncProfile.hpp"
+#include "service/base64/base64.hpp"
+#include "Database/Database.hpp"
+#include "config.h"
+#include "Http/HttpClient.hpp"
+#include "Http/SyncProfile/SyncProfile.hpp"
 
 static int getToken(HttpClient *client, camera_t &camera);
 static void getAllFileName(std::vector<std::string> &filenames, std::string folderPath);

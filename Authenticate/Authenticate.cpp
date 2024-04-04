@@ -5,7 +5,14 @@
 * Copyright © 2021 BKAV. All rights reserved.
 */
 
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <vector>
+#include "jwt/jwt.hpp"
+#include "service/json/json.hpp"
 #include "Authenticate.hpp"
+
 using namespace jwt::params;
 
 Authenticate::Authenticate() { 

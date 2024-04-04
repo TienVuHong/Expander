@@ -5,13 +5,6 @@
 * Copyright © 2021 BKAV. All rights reserved.
 */
 
-#include <iostream>
-#include <string>
-#include <cstring>
-#include <vector>
-#include "jwt/jwt.hpp"
-#include "../json.h"
-
 class Authenticate {
 public:
     Authenticate();

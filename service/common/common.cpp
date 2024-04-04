@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "common.h"
+#include "common.hpp"
 
 std::vector<std::string> splitString(std::string data, std::string delimiter)
 {

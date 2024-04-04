@@ -1,5 +1,7 @@
-#include "../service/common/common.h"
-#include "../config.h"
+#include <sqlite3.h>
+#include "service/json/json.hpp"
+#include "service/common/common.hpp"
+#include "config.h"
 #include "Database.hpp"
 
 DatabaseForward::DatabaseForward()

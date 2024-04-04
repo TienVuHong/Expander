@@ -3,8 +3,8 @@
 #include <unistd.h>
 #include <queue>
 
-#include "../Database/Database.hpp"
-#include "../json.h"
+#include "Database/Database.hpp"
+#include "service/json/json.hpp"
 #include "EventManager.hpp"
 
 EventManager::EventManager()
@@ -20,7 +20,7 @@ EventManager::~EventManager()
     delete(databaseEvent);
 }
 
-int EventManager::push(json event)
+void EventManager::push(json event)
 {
     QueueEvent.push(event);
 }
@@ -41,7 +41,7 @@ void* EventManager::threadEventManager(void *arg)
     pthread_exit(NULL);
 } 
 
-int EventManager::get(json &event, json condition)
+void EventManager::get(json &event, json condition)
 {
     databaseEvent->get(event, condition);
 }

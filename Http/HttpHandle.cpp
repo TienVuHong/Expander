@@ -28,16 +28,16 @@
 // #include <opencv2/opencv.hpp>
 // #include <opencv4/opencv2/opencv.hpp>
 
-#include "../service/datetime/datetime.hpp"
-#include "../service/common/common.h"
-#include "../service/base64/base64.h"
-#include "../Authenticate/Authenticate.hpp"
-#include "../Controller/Controller.hpp"
-#include "../Database/Database.hpp"
-#include "../EventManager/EventManager.hpp"
-#include "../Log/Log.hpp"
-#include "../json.h"
-#include "../config.h"
+#include "service/json/json.hpp"
+#include "service/common/common.hpp"
+#include "service/base64/base64.hpp"
+#include "service/datetime/datetime.hpp"
+#include "Authenticate/Authenticate.hpp"
+#include "Controller/Controller.hpp"
+#include "Database/Database.hpp"
+#include "EventManager/EventManager.hpp"
+#include "Log/Log.hpp"
+#include "config.h"
 
 #include "SyncProfile/SyncProfile.hpp"
 #include "HttpClient.hpp"
@@ -683,7 +683,7 @@ void apiIp(struct evhttp_request *request)
                 {
                     changeDeviceIP(ip, gw, dns);
                     sendJson(request, 200, "change ip successfully.");
-                    start_timer(4000, reboot, NULL);
+                    // start_timer(4000, reboot, NULL);
                 }
                 else
                     sendError(request, 400, "insert correct format of ip and gw");
@@ -766,7 +766,7 @@ void apiReset(struct evhttp_request *request)
     {
         if (readMethod(request) == "POST")
         {
-            start_timer(4000, reboot, NULL);
+            // start_timer(4000, reboot, NULL);
             logi->writeLog(readIpClient(request), readMethod(request), "/api/reset", "REBOOT");
             sendJson(request, 200, "Reboot successfully");
         }
@@ -1028,7 +1028,7 @@ void apiOpenDevice(struct evhttp_request *request)
                         REQUIRED(j, open);
                         if (deviceid >= 1 && deviceid <= 3)
                         {
-                            control->ControlOpenDeviceDelay(deviceid, database->getTimeOpen(deviceid));
+                            // control->ControlOpenDeviceDelay(deviceid, database->getTimeOpen(deviceid));
                             // control->ControlChannel(deviceid, open);
                             sendJson(request, 200, "Allow access");
                             logi->writeLog(
@@ -1356,7 +1356,7 @@ void cameraOpendoorHandle(struct evhttp_request *request, int channel)
             if (!jContent.contains("object_type")) SEND_ERROR_RETURN(request, 400, "object_type not found");
             if (jContent["object_type"] == "car")
             {
-                control->ControlOpenDeviceDelay(channel, database->getTimeOpen(channel));
+                // control->ControlOpenDeviceDelay(channel, database->getTimeOpen(channel));
                 logi->writeLog(readIpClient(request), readMethod(request),"/opendoor/" + std::to_string(channel), std::string(jContent["object_type"]) + " >>>");
                 sendJson(request, 200, "Car");
                 return;
@@ -1424,7 +1424,7 @@ void cameraOpendoorHandle(struct evhttp_request *request, int channel)
                 if (allow)
                 {
                     std::cout << "--> Accept" << std::endl;
-                    control->ControlOpenDeviceDelay(channel, database->getTimeOpen(channel));
+                    // control->ControlOpenDeviceDelay(channel, database->getTimeOpen(channel));
                     IDAccept += id + " ";
                 }
                 else
