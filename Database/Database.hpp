@@ -9,10 +9,8 @@
 #ifndef DATABASE_HPP
 #define DATABASE_HPP
 
-#include <iostream>
-#include <string>
 #include <sqlite3.h>
-#include "../json.h"
+#include "service/json/json.hpp"
 
 /* Max physical channel of expander */
 #define MAX_CHANNEL     3U

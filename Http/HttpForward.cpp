@@ -4,9 +4,9 @@
 #include <unistd.h>
 #include <stdio.h>
 
-#include "../Database/Database.hpp"
-#include "../json.h"
-#include "../config.h"
+#include "Database/Database.hpp"
+#include "service/json/json.hpp"
+#include "config.h"
 #include "HttpClient.hpp"
 #include "HttpForward.hpp"
 

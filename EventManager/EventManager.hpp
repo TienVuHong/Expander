@@ -12,8 +12,8 @@ class EventManager{
 public:
     EventManager();
     ~EventManager();
-    int push(json event);
-    int get(json &event, json condition);
+    void push(json event);
+    void get(json &event, json condition);
 private:
     DatabaseEvent *databaseEvent;
     std::queue<json> QueueEvent;

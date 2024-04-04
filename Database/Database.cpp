@@ -7,9 +7,11 @@
  */
 
 #include <fstream>
-#include "../service/common/common.h"
-#include "../service/base64/base64.h"
-#include "../config.h"
+#include "service/json/json.hpp"
+#include "service/common/common.hpp"
+#include "service/base64/base64.hpp"
+#include <sqlite3.h>
+#include "config.h"
 #include "Database.hpp"
 
 Database::Database()

@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-#include "io.hpp"
+#include "gpio.hpp"
 
 static gpio_p gpio_proc = {
 	gpio_dispose,
